@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomePage extends StatelessWidget {
-  HomePage({super.key});
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -33,11 +33,11 @@ class HomePage extends StatelessWidget {
                           '${BlocProvider.of<CounterCubit>(context).teamAPoints}',
                           style: const TextStyle(fontSize: 150)),
                       const SizedBox(height: 40),
-                      Custom_Button(team: 'A', buttonNumber: 1),
+                      const CustomButton(team: 'A', buttonNumber: 1),
                       const SizedBox(height: 20),
-                      Custom_Button(team: 'A', buttonNumber: 2),
+                      const CustomButton(team: 'A', buttonNumber: 2),
                       const SizedBox(height: 20),
-                      Custom_Button(team: 'A', buttonNumber: 3),
+                      const CustomButton(team: 'A', buttonNumber: 3),
                     ],
                   ),
                   const SizedBox(
@@ -55,11 +55,11 @@ class HomePage extends StatelessWidget {
                           '${BlocProvider.of<CounterCubit>(context).teamBPoints}',
                           style: const TextStyle(fontSize: 150)),
                       const SizedBox(height: 40),
-                      Custom_Button(team: 'B', buttonNumber: 1),
+                      const CustomButton(team: 'B', buttonNumber: 1),
                       const SizedBox(height: 20),
-                      Custom_Button(team: 'B', buttonNumber: 2),
+                      const CustomButton(team: 'B', buttonNumber: 2),
                       const SizedBox(height: 20),
-                      Custom_Button(team: 'B', buttonNumber: 3),
+                      const CustomButton(team: 'B', buttonNumber: 3),
                     ],
                   ),
                 ],
@@ -69,11 +69,11 @@ class HomePage extends StatelessWidget {
                 onPressed: () {
                   BlocProvider.of<CounterCubit>(context).reset();
                 },
-                child: const Text('Reset',
-                    style: TextStyle(color: Colors.black, fontSize: 18)),
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.orange,
                     fixedSize: const Size(200, 50)),
+                child: const Text('RESET',
+                    style: TextStyle(color: Colors.black, fontSize: 18)),
               ),
             ],
           ),
